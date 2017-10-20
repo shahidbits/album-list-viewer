@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html ng-app="diagnalTestApp">
+<head>
+    <title>Diagnal Test</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="http://diagnal.com/wp-content/uploads/2016/02/favico-1.png">
+
+    <!-- Web Fonts -->
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+</head>
+<body>
+<div ng-controller="DataCtrl">
+
+    <div ng-include="'partials/topNavigationBar.html'"></div>
+
+    <div id="data-block" infinite-scroll='loadMore()' infinite-scroll-disabled='isLoadingMore'
+         infinite-scroll-distance='4'>
+
+
+        <div ng-repeat="rows in chunkedData" class="row" style="margin-left: 0px; margin-right: 0px;">
+
+            <div ng-repeat="album in rows">
+
+                <div class="content-div col-xs-4 col-sm-4 col-md-4 col-lg-4"
+                     style="padding-left: {{$index%3==0?30:15}}px; padding-right: {{$index%3==2?30:15}}px">
+
+                    <div class="row" style="margin-left: 0px; margin-right: 0px;">
+                        <img src="images/{{album['poster-image']}}" width="100%" height="100px"><br>
+                    </div>
+                    <div class="row" style="margin-left: 0px; margin-right: 0px;">
+                        <div class="image-title">
+                            {{album.name}}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!--<div ng-repeat="album in data">-->
+
+            <!--<div class="content-div col-xs-4 col-sm-4 col-md-4 col-lg-4"-->
+                 <!--style="padding-left: {{$index%3==0?30:15}}px; padding-right: {{$index%3==2?30:15}}px">-->
+
+                <!--<div class="row" style="margin-left: 0px; margin-right: 0px;">-->
+                    <!--<img src="images/{{album['poster-image']}}" width="100%" height="100px"><br>-->
+                <!--</div>-->
+                <!--<div class="row" style="margin-left: 0px; margin-right: 0px;">-->
+                    <!--<div class="image-title">-->
+                        <!--{{album.name}}-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            <!--</div>-->
+        <!--</div>-->
+
+    </div>
+</div>
+
+<!-- JS Global Compulsory -->
+<script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- JS Libraries -->
+<script type="text/javascript" src="js/lib/angular.min.js"></script>
+<script type="text/javascript" src="js/lib/angular-resource.min.js"></script>
+<script type="text/javascript" src="js/lib/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="js/lib/angular-route.min.js"></script>
+<script type="text/javascript" src="js/lib/ng-infinite-scroll.min.js"></script>
+
+<!-- Configuration File -->
+<script type="text/javascript" src="js/config.js"></script>
+
+<!-- Header File -->
+<script type="text/javascript" src="js/header.js"></script>
+
+<!-- Website App File -->
+<script type="text/javascript" src="app.js"></script>
+
+<!-- Custom File -->
+<!--<script type="text/javascript" src="js/custom.js"></script>-->
+
+<!-- Services -->
+<script type="text/javascript" src="js/services/dataService.js"></script>
+
+<!-- Directives -->
+
+<!-- Controllers -->
+<script type="text/javascript" src="js/controllers/dataController.js"></script>
+
+<script type="text/javascript">
+
+    var bgClassAdded = false;
+    $(window).scroll(function () {
+        if ($(this).scrollTop() === 100) { // this refers to window
+            if (bgClassAdded)
+                $('#top-nav-bar').removeClass('nav_bar_bg');
+            bgClassAdded = false;
+        } else {
+            if (!bgClassAdded)
+                $('#top-nav-bar').addClass('nav_bar_bg');
+            bgClassAdded = true;
+        }
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+/******************************************************************************
+ *
+ *  app.css - Main CSS file for the application
+ *
+ * user_id    DD/MM/YYYY    Note
+ * mohashah   12/10/2016    Created
+ *
+ *****************************************************************************/
+
+body {
+    background-color: #000000;
+}
+
+#top-nav-bar {
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    height: 192px;
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 36px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.nav_bar_bg {
+    z-index: 2000;
+    background: url(../images/nav_bar.png) repeat-x;
+}
+
+#back-button-icon {
+    margin-right: 10px;
+}
+
+#search-btn-icon {
+}
+
+.content-div {
+    background-color: #000000;
+    /*width: 100%;*/
+    /*height: 100%;*/
+}
+
+#data-block {
+    margin-top: 192px;
+}
+
+.content-image {
+    /*padding-left: 15px;*/
+    /*padding-right: 15px;*/
+}
+
+.image-title {
+    color: gainsboro;
+    font-size: 14px;
+    padding-top: 24px;
+    margin-bottom: 90px;
+}
+
+/***********************************  END  ***********************************/
