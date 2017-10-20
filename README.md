@@ -13,6 +13,7 @@ npm start # Starts api server on port 9000
 ```
 then, we will start the http server -
 ```
+npm i -g http-server
 cd ../frontend
 bower install
 http-server -p 4000 # Starts http server on port 4000
@@ -20,7 +21,7 @@ http-server -p 4000 # Starts http server on port 4000
 
 ## Details
 
-#### FRONT END SERVER
+#### HTTP SERVER
 
 The front end of this project is written in AngularJS. 
 
