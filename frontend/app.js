@@ -17,15 +17,15 @@
  *
  * Main module of the application.
  */
-var diagnalTestApp = angular
-    .module('diagnalTestApp', [
+var albumApp = angular
+    .module('albumApp', [
         'ngRoute',
         'ngResource',
         'ngSanitize',
         'infinite-scroll'
     ]);
 
-diagnalTestApp
+albumApp
     .config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
 
     }

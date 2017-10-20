@@ -9,9 +9,9 @@
 
 'use strict';
 
-var diagnalTestApp = angular.module('diagnalTestApp');
+var albumApp = angular.module('albumApp');
 
-diagnalTestApp
+albumApp
     .controller('DataCtrl', ['$scope', '$location', '$timeout', 'Data',
         function ($scope, $location, $timeout, Data) {
 

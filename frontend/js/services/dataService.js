@@ -11,9 +11,9 @@
 
 var apiRootUrl = DATA_SERVER + '/api//page';
 
-var diagnalTestApp = angular.module('diagnalTestApp');
+var albumApp = angular.module('albumApp');
 
-diagnalTestApp
+albumApp
     .factory('Data', function($resource) {
 
         return $resource(

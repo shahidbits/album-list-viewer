@@ -15,18 +15,12 @@ var config = {
     db: {
 
         /* Local */
-        name: "diagnal",
-        uri: "mongodb://127.0.0.1:27017/diagnal"
-
-        /* MongoLabs
-         name: "diagnal",
-         uri: "mongodb://amex:welcome*123@ds053130.mongolab.com:53130/diagnal"
-         */
+        name: "albumviewer",
+        uri: "mongodb://127.0.0.1:27017/albumviewer"
 
     },
     cors: [
-        "http://localhost:4000",
-        "http://ec2-54-234-174-96.compute-1.amazonaws.com:4000"
+        "http://localhost:4000"
     ],
     logFile: 'test',
     recLimit: 20
